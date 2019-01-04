@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Documentation</title>
+</head>
+<body>
+    <h1>CSS selectors documentation</h1>
+    <nav id="navbar">
+        <header>Contents</header>
+        <a href="#type_selectors" class="nav-link">Type selectors</a>
+        <a href="#" class="nav-link">:first-child and :last-child</a>
+        <a href="#" class="nav-link">:not() pseudo-class</a>
+        <a href="#" class="nav-link">Indexed pseudo-classes</a>
+        <a href="#" class="nav-link">Calculating specificity of CSS</a>
+    </nav>
+    <main id="main-doc">
+        <section id="type_selectors" class="main-section">
+            <h2>Type selectors</h2>
+            <p>HTML elements are written using a tag with some attributes like "class" and "id" which are quite common for nearly all elements. We can say that the <em>type</em> of
+            an element is denoted by it's tag. Here are a few examples</p>
+            <ol>
+                <li>
+                    <code>
+                        &lt;a href="#"&gt;Follow on Twitter&lt;a&gt;
+                        &lt;a href="#"&gt;Send an email&lt;a&gt;
+                        &lt;a href="#"&gt;Follow on Reddit&lt;a&gt;
+                    </code>
+                    <p>Now to select all the links above, we need to target them using their <em>type</em>. We can do this using the tag.</p>
+                    <code>
+                        a { <br>
+                            background-color: green; <br>
+                        }
+                    </code>
+                    <p>All links will get a background color of green since we have targeted them by type.</p>
+                </li>
+                <li>
+                    <code>
+                        &lt;p&gt;This is a paragraph&lt;p&gt; <br>
+                        &lt;div&gt;This is a div&lt;div&gt;
+                    </code>
+                    <p>Here, if we use the type selector "p", it will only target the first element and not the second, because they are both of different types.</p>
+                </li>
+            </ol>
+        </section>
+        <section class="main-section"></section>
+        <section class="main-section"></section>
+        <section class="main-section"></section>
+        <section class="main-section"></section>
+    </main>
+</body>
+</html>
