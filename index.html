@@ -11,8 +11,8 @@
     <nav id="navbar">
         <header>Contents</header>
         <a href="#type_selectors" class="nav-link">Type selectors</a>
-        <a href="#" class="nav-link">:first-child and :last-child</a>
-        <a href="#" class="nav-link">:not() pseudo-class</a>
+        <a href="#" class="nav-link">first-child and last-child</a>
+        <a href="#" class="nav-link">not() pseudo-class</a>
         <a href="#" class="nav-link">Indexed pseudo-classes</a>
         <a href="#" class="nav-link">Calculating specificity of CSS</a>
     </nav>
@@ -45,7 +45,35 @@
                 </li>
             </ol>
         </section>
-        <section class="main-section"></section>
+        <section id="first-child_and_last-child" class="main-section">
+            <h2>first-child and last-child</h2>
+            <p><b>:first-child</b> and <b>:last-child</b> are pseudo-classes that make it posible to select the first and last child of a particular element.
+            So if an element has 3 child elements, we can use :first-child to select only the very first child from the 3 child elements.</p>
+            <p>Similarly, using :last-child will select the very last child element from those 3 elements. Here is an example:</p>
+            <code>
+                HTML:
+                &lt;ul&gt;
+                    &lt;li&gt; Number 1 &lt;li&gt;
+                    &lt;li&gt; Number 2 &lt;li&gt;
+                    &lt;li&gt; Number 3 &lt;li&gt;
+                    &lt;li&gt; Number 4 &lt;li&gt;
+                    &lt;li&gt; Number 5 &lt;li&gt;
+                &lt;ul&gt;
+
+                CSS:
+                li:first-child {
+                    color: red;
+                }
+            </code>
+            <p>In this example we apply the pseudo-class <i>:first-child</i> to a list element. The result would be:</p>
+            <ul>
+                <li style="color: red;">Number 1</li>
+                <li>Number 2</li>
+                <li>Number 3</li>
+                <li>Number 4</li>
+                <li>Number 5</li>
+            </ul>
+        </section>
         <section class="main-section"></section>
         <section class="main-section"></section>
         <section class="main-section"></section>
