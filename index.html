@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="layout.css">
     <title>CSS Documentation</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         <header>Contents</header>
         <a href="#type_selectors" class="nav-link">Type selectors</a>
         <a href="#" class="nav-link">first-child and last-child</a>
-        <a href="#" class="nav-link">not() pseudo-class</a>
+        <a href="#" class="nav-link">not pseudo-class</a>
         <a href="#" class="nav-link">Indexed pseudo-classes</a>
         <a href="#" class="nav-link">Calculating specificity of CSS</a>
     </nav>
@@ -22,7 +23,7 @@
             <p>HTML elements are written using a tag with some attributes like "class" and "id" which are quite common for nearly all elements. We can say that the <em>type</em> of
             an element is denoted by it's tag. Here are a few examples</p>
             <ol>
-                <li>
+                <li class="code-examples">
                     <code>
                         &lt;a href="#"&gt;Follow on Twitter&lt;a&gt;
                         &lt;a href="#"&gt;Send an email&lt;a&gt;
@@ -31,7 +32,7 @@
                     <p>Now to select all the links above, we need to target them using their <em>type</em>. We can do this using the tag.</p>
                     <code>
                         a { <br>
-                            background-color: green; <br>
+                            &nbsp;&nbsp;background-color: green; <br>
                         }
                     </code>
                     <p>All links will get a background color of green since we have targeted them by type.</p>
@@ -50,21 +51,23 @@
             <p><b>:first-child</b> and <b>:last-child</b> are pseudo-classes that make it posible to select the first and last child of a particular element.
             So if an element has 3 child elements, we can use :first-child to select only the very first child from the 3 child elements.</p>
             <p>Similarly, using :last-child will select the very last child element from those 3 elements. Here is an example:</p>
-            <code>
-                HTML:
-                &lt;ul&gt;
-                    &lt;li&gt; Number 1 &lt;li&gt;
-                    &lt;li&gt; Number 2 &lt;li&gt;
-                    &lt;li&gt; Number 3 &lt;li&gt;
-                    &lt;li&gt; Number 4 &lt;li&gt;
-                    &lt;li&gt; Number 5 &lt;li&gt;
-                &lt;ul&gt;
-
-                CSS:
-                li:first-child {
-                    color: red;
-                }
-            </code>
+            <div class="code-examples">
+                <code>
+                    <b>HTML:</b> <br>
+                    &lt;ul&gt; <br>
+                        &nbsp;&nbsp;&lt;li&gt; Number 1 &lt;li&gt; <br>
+                        &nbsp;&nbsp;&lt;li&gt; Number 2 &lt;li&gt; <br>
+                        &nbsp;&nbsp;&lt;li&gt; Number 3 &lt;li&gt; <br>
+                        &nbsp;&nbsp;&lt;li&gt; Number 4 &lt;li&gt; <br>
+                        &nbsp;&nbsp;&lt;li&gt; Number 5 &lt;li&gt; <br>
+                    &lt;ul&gt; 
+                    <br>
+                    <b>CSS:</b> <br>
+                    li:first-child { <br>
+                        &nbsp;&nbsp;color: red;
+                    }
+                </code>
+            </div>
             <p>In this example we apply the pseudo-class <i>:first-child</i> to a list element. The result would be:</p>
             <ul>
                 <li style="color: red;">Number 1</li>
@@ -74,7 +77,19 @@
                 <li>Number 5</li>
             </ul>
         </section>
-        <section class="main-section"></section>
+        <section id="not_pseudo-class" class="main-section">
+            <h2>not pseudo-class</h2>
+            <p>The <b>:not()</b> pseudo-class is perhaps the most powerful of all pseudo-classes. It returns all elements that do not match the selection.</p>
+            <p>For example, we need to select link elements but leave out those that have the class of "visited". In that case, the CSS would be something like this:</p>
+            <div class="code-examples">
+                <code>
+                    a:not(.visited) { <br>
+                        &nbsp;&nbsp;color: green; <br>
+                    }
+                </code>
+            </div>
+            <p>This will target all the links that <b>do not</b> have the class of "visited" and give them a font color of green</p>
+        </section>
         <section class="main-section"></section>
         <section class="main-section"></section>
     </main>
