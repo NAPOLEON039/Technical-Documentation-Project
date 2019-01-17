@@ -1,6 +1,18 @@
 * {
     font-size: large;
 }
+
+#contents {
+    display: grid;
+    grid-template-columns: 250px auto;
+}
+
+h1 {
+    position: relative;
+    left: 20%;
+    font-size: 48px;
+}
+
 .code-examples {
     color:  #2a150d;
     width: 800px;
@@ -16,4 +28,14 @@
 
 #even-example > li:nth-child(even) {
     color: blue;
+}
+
+#navbar {
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid black;
+    margin-right: 15px;
+}
+#navbar > a {
+    margin-top: 20px;
 }

@@ -8,205 +8,207 @@
     <title>CSS Documentation</title>
 </head>
 <body>
-    <h1>CSS selectors documentation</h1>
-    <nav id="navbar">
-        <header>Contents</header>
-        <a href="#type_selectors" class="nav-link">Type selectors</a>
-        <a href="#" class="nav-link">first-child and last-child</a>
-        <a href="#" class="nav-link">not pseudo-class</a>
-        <a href="#" class="nav-link">Selecting specific elements</a>
-        <a href="#" class="nav-link">Calculating specificity of CSS</a>
-    </nav>
-    <main id="main-doc">
-        <section id="type_selectors" class="main-section">
-            <h2>Type selectors</h2>
-            <p>HTML elements are written using a tag with some attributes like "class" and "id" which are quite common for nearly all elements. We can say that the <em>type</em> of
-            an element is denoted by it's tag. Here are a few examples</p>
-            <ol>
-                <li>
-                    <div class="code-examples">
-                        <code>
-                            &lt;a href="#"&gt;Follow on Twitter&lt;a&gt; <br>
-                            &lt;a href="#"&gt;Send an email&lt;a&gt; <br>
-                            &lt;a href="#"&gt;Follow on Reddit&lt;a&gt; <br>
-                        </code>
-                    </div>
-                    <p>Now to select all the links above, we need to target them using their <em>type</em>. We can do this using the tag.</p>
-                    <div class="code-examples">
-                        <code>
-                            a { <br>
-                                &nbsp;&nbsp;background-color: green; <br>
-                            }
-                        </code>
-                    </div>
-                    <p>All links will get a background color of green since we have targeted them by type.</p>
-                </li>
-                <li>
-                    <div class="code-examples">
-                        <code>
-                            &lt;p&gt;This is a paragraph&lt;p&gt; <br>
-                            &lt;div&gt;This is a div&lt;div&gt;
-                        </code>
-                    </div>
-                    <p>Here, if we use the type selector "p", it will only target the first element and not the second, because they are both of different types.</p>
-                </li>
-            </ol>
-        </section>
-        <section id="first-child_and_last-child" class="main-section">
-            <h2>first-child and last-child</h2>
-            <p><b>:first-child</b> and <b>:last-child</b> are pseudo-classes that make it posible to select the first and last child of a particular element.
-            So if an element has 3 child elements, we can use :first-child to select only the very first child from the 3 child elements.</p>
-            <p>Similarly, using :last-child will select the very last child element from those 3 elements. Here is an example:</p>
-            <div class="code-examples">
-                <code>
-                    <b>HTML:</b> <br>
-                    &lt;ul&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 1 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 2 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 3 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 4 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 5 &lt;li&gt; <br>
-                    &lt;ul&gt; 
-                    <br>
+    <div id="contents">
+        <nav id="navbar">
+            <header>Contents</header>
+            <a href="#type_selectors" class="nav-link">Type selectors</a>
+            <a href="#first-child_and_last-child" class="nav-link">first-child and last-child</a>
+            <a href="#not_pseudo-class" class="nav-link">not pseudo-class</a>
+            <a href="#selecting_specific_elements" class="nav-link">Selecting specific elements</a>
+            <a href="#calculating_specificity_of_css" class="nav-link">Calculating specificity of CSS</a>
+        </nav>
+        <main id="main-doc">
+            <h1>CSS selectors documentation</h1>
+            <section id="type_selectors" class="main-section">
+                <h2>Type selectors</h2>
+                <p>HTML elements are written using a tag with some attributes like "class" and "id" which are quite common for nearly all elements. We can say that the <em>type</em> of
+                an element is denoted by it's tag. Here are a few examples</p>
+                <ol>
+                    <li>
+                        <div class="code-examples">
+                            <code>
+                                &lt;a href="#"&gt;Follow on Twitter&lt;a&gt; <br>
+                                &lt;a href="#"&gt;Send an email&lt;a&gt; <br>
+                                &lt;a href="#"&gt;Follow on Reddit&lt;a&gt; <br>
+                            </code>
+                        </div>
+                        <p>Now to select all the links above, we need to target them using their <em>type</em>. We can do this using the tag.</p>
+                        <div class="code-examples">
+                            <code>
+                                a { <br>
+                                    &nbsp;&nbsp;background-color: green; <br>
+                                }
+                            </code>
+                        </div>
+                        <p>All links will get a background color of green since we have targeted them by type.</p>
+                    </li>
+                    <li>
+                        <div class="code-examples">
+                            <code>
+                                &lt;p&gt;This is a paragraph&lt;p&gt; <br>
+                                &lt;div&gt;This is a div&lt;div&gt;
+                            </code>
+                        </div>
+                        <p>Here, if we use the type selector "p", it will only target the first element and not the second, because they are both of different types.</p>
+                    </li>
+                </ol>
+            </section>
+            <section id="first-child_and_last-child" class="main-section">
+                <h2>first-child and last-child</h2>
+                <p><b>:first-child</b> and <b>:last-child</b> are pseudo-classes that make it posible to select the first and last child of a particular element.
+                So if an element has 3 child elements, we can use :first-child to select only the very first child from the 3 child elements.</p>
+                <p>Similarly, using :last-child will select the very last child element from those 3 elements. Here is an example:</p>
+                <div class="code-examples">
+                    <code>
+                        <b>HTML:</b> <br>
+                        &lt;ul&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 1 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 2 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 3 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 4 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 5 &lt;li&gt; <br>
+                        &lt;ul&gt; 
+                        <br>
+                        <b>CSS:</b> <br>
+                        li:first-child { <br>
+                            &nbsp;&nbsp;color: red; <br>
+                        }
+                    </code>
+                </div>
+                <p>In this example we apply the pseudo-class <i>:first-child</i> to a list element. The result would be:</p>
+                <div class="code-examples">
+                    <ul>
+                        <li style="color: red;">Number 1</li>
+                        <li>Number 2</li>
+                        <li>Number 3</li>
+                        <li>Number 4</li>
+                        <li>Number 5</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="not_pseudo-class" class="main-section">
+                <h2>not pseudo-class</h2>
+                <p>The <b>:not()</b> pseudo-class is perhaps the most powerful of all pseudo-classes. It returns all elements that do not match the selection.</p>
+                <p>For example, we need to select link elements but leave out those that have the class of "visited". In that case, the CSS would be something like this:</p>
+                <div class="code-examples">
+                    <code>
+                        a:not(.visited) { <br>
+                            &nbsp;&nbsp;color: green; <br>
+                        }
+                    </code>
+                </div>
+                <p>This will target all the links that <b>do not</b> have the class of "visited" and give them a font color of green</p>
+            </section>
+            <section id="selecting_specific_elements" class="main-section">
+                <h2>Selecting specific elements</h2>
+                <p>
+                    :first-child and :last-child allow us to select the first and last child of an element. But what if we want to select another child besides
+                    the first or the last? For that we have <b>:nth-child()</b>
+                </p>
+                <p>
+                    Using <em>:nth-child()</em> we can specify a particular number and that child will be selected. Here is an example:
+                </p>
+                <div class="code-examples">
+                    <code>
+                        <b>HTML:</b> <br>
+                        &lt;ul&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 1 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 2 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 3 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 4 &lt;li&gt; <br>
+                            &nbsp;&nbsp;&lt;li&gt; Number 5 &lt;li&gt; <br>
+                        &lt;ul&gt; 
+                        <br>
+                        <b>CSS:</b> <br>
+                        li:nth-child(4) { <br>
+                            &nbsp;&nbsp;color: blue; <br>
+                        }
+                    </code>
+                </div>
+                <p>And this is the result:</p>
+                <div class="code-examples">
+                    <ul id="nth-example">
+                        <li>Number 1</li>
+                        <li>Number 2</li>
+                        <li>Number 3</li>
+                        <li>Number 4</li>
+                        <li>Number 5</li>
+                    </ul>
+                </div>
+                <p>We can also select even or odd number of elements. Using the same example as above, we'll make changes to color all even elements only.</p>
+                <div class="code-examples">
                     <b>CSS:</b> <br>
-                    li:first-child { <br>
-                        &nbsp;&nbsp;color: red; <br>
-                    }
-                </code>
-            </div>
-            <p>In this example we apply the pseudo-class <i>:first-child</i> to a list element. The result would be:</p>
-            <div class="code-examples">
-                <ul>
-                    <li style="color: red;">Number 1</li>
-                    <li>Number 2</li>
-                    <li>Number 3</li>
-                    <li>Number 4</li>
-                    <li>Number 5</li>
-                </ul>
-            </div>
-        </section>
-        <section id="not_pseudo-class" class="main-section">
-            <h2>not pseudo-class</h2>
-            <p>The <b>:not()</b> pseudo-class is perhaps the most powerful of all pseudo-classes. It returns all elements that do not match the selection.</p>
-            <p>For example, we need to select link elements but leave out those that have the class of "visited". In that case, the CSS would be something like this:</p>
-            <div class="code-examples">
-                <code>
-                    a:not(.visited) { <br>
-                        &nbsp;&nbsp;color: green; <br>
-                    }
-                </code>
-            </div>
-            <p>This will target all the links that <b>do not</b> have the class of "visited" and give them a font color of green</p>
-        </section>
-        <section id="selecting_specific_elements" class="main-section">
-            <h2>Selecting specific elements</h2>
-            <p>
-                :first-child and :last-child allow us to select the first and last child of an element. But what if we want to select another child besides
-                the first or the last? For that we have <b>:nth-child()</b>
-            </p>
-            <p>
-                Using <em>:nth-child()</em> we can specify a particular number and that child will be selected. Here is an example:
-            </p>
-            <div class="code-examples">
-                <code>
-                    <b>HTML:</b> <br>
-                    &lt;ul&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 1 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 2 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 3 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 4 &lt;li&gt; <br>
-                        &nbsp;&nbsp;&lt;li&gt; Number 5 &lt;li&gt; <br>
-                    &lt;ul&gt; 
+                    <code>
+                        li:nth-child(even) { <br>
+                            &nbsp;&nbsp;color: blue; <br>
+                        }
+                    </code>
                     <br>
+                    <b>Result:</b> <br>
+                    <ul id="even-example">
+                        <li>Number 1</li>
+                        <li>Number 2</li>
+                        <li>Number 3</li>
+                        <li>Number 4</li>
+                        <li>Number 5</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="calculating_specificity_of_css" class="main-section">
+                <h2>Calculating specificity of CSS</h2>
+                <p>
+                    CSS stands for Cascading Style Sheets. We specify rules that are used to apply effects to HTML elements. We can target an element or
+                    a group of elements and apply <i>styles</i> to them. If we target multiple elements, then the style that is specified most recently is applied.
+                    A similar example would be: if we keep a red-colored book on a table and then keep a green-colored one directly on top of the red book,
+                    we'd see only the green book from above since the red one was kept <em>before</em> it and is hidden beneath it. In the same way, the most recent
+                    style rule is applied when two rules target the same element. This is the cascading feature of CSS.
+                </p>
+                <p>
+                    But before this, the specificity of the rule is checked. This means that the rule which targets an element more specifically, will get precedence.
+                    Only when all rules targeting the same element have equal specificity that cascading is applied.
+                </p>
+                <p>
+                    Calculating the specificity of a CSS rule is simple to remember. Specificity is denoted by 3 digits - <b>0,0,0</b>.
+                    Counting the number of id selectors gives us the value of the first digit. So if we have a CSS rule like this - <pre>#code > #display {..}</pre>
+                    then the specificity of this rule is <b>2,0,0</b>. <br>
+                    The next digit is calculated by counting the number of class selectors, attribute selectors and pseudo-classes. If there are multiple of them
+                    they simply add up. Let's see an example:
+                </p>
+                <div class="code-examples">
                     <b>CSS:</b> <br>
-                    li:nth-child(4) { <br>
-                        &nbsp;&nbsp;color: blue; <br>
-                    }
-                </code>
-            </div>
-            <p>And this is the result:</p>
-            <div class="code-examples">
-                <ul id="nth-example">
-                    <li>Number 1</li>
-                    <li>Number 2</li>
-                    <li>Number 3</li>
-                    <li>Number 4</li>
-                    <li>Number 5</li>
-                </ul>
-            </div>
-            <p>We can also select even or odd number of elements. Using the same example as above, we'll make changes to color all even elements only.</p>
-            <div class="code-examples">
-                <b>CSS:</b> <br>
-                <code>
-                    li:nth-child(even) { <br>
-                        &nbsp;&nbsp;color: blue; <br>
-                    }
-                </code>
-                <br>
-                <b>Result:</b> <br>
-                <ul id="even-example">
-                    <li>Number 1</li>
-                    <li>Number 2</li>
-                    <li>Number 3</li>
-                    <li>Number 4</li>
-                    <li>Number 5</li>
-                </ul>
-            </div>
-        </section>
-        <section id="calculating_specificity_of_css" class="main-section">
-            <h2>Calculating specificity of CSS</h2>
-            <p>
-                CSS stands for Cascading Style Sheets. We specify rules that are used to apply effects to HTML elements. We can target an element or
-                a group of elements and apply <i>styles</i> to them. If we target multiple elements, then the style that is specified most recently is applied.
-                A similar example would be: if we keep a red-colored book on a table and then keep a green-colored one directly on top of the red book,
-                we'd see only the green book from above since the red one was kept <em>before</em> it and is hidden beneath it. In the same way, the most recent
-                style rule is applied when two rules target the same element. This is the cascading feature of CSS.
-            </p>
-            <p>
-                But before this, the specificity of the rule is checked. This means that the rule which targets an element more specifically, will get precedence.
-                Only when all rules targeting the same element have equal specificity that cascading is applied.
-            </p>
-            <p>
-                Calculating the specificity of a CSS rule is simple to remember. Specificity is denoted by 3 digits - <b>0,0,0</b>.
-                Counting the number of id selectors gives us the value of the first digit. So if we have a CSS rule like this - <pre>#code > #display {..}</pre>
-                then the specificity of this rule is <b>2,0,0</b>. <br>
-                The next digit is calculated by counting the number of class selectors, attribute selectors and pseudo-classes. If there are multiple of them
-                they simply add up. Let's see an example:
-            </p>
-            <div class="code-examples">
-                <b>CSS:</b> <br>
-                <code>
-                    #heading .examples:first-child {....}
-                </code>
-            </div>
-            <p>
-                Here, we have one id selector (#heading), one class selector (.examples) and one pseudo-class (:first-child). That means the specificity of this
-                CSS rule is <b>1,2,0</b>. Now, for the final digit, we count the number of type selectors and pseudo-elements. Now let's see an example
-                to understand how to determine which rule will be applied when two rules target the same element.
-            </p>
-            <p>
-                Let's take an element with the class of <i>book</i>. Two CSS rules will try to apply color to it. The rule with the higher specificity will be used.
-            </p>
-            <div class="code-examples">
-                <code>
-                    div#materials > .book { <br>
-                        &nbsp;&nbsp;color: orange; <br>
-                    }
-                    <br>
-                    #materials > .book { <br>
-                        &nbsp;&nbsp;color: blue; <br>
-                    }
-                </code>
-            </div>
-            <p>
-                In the first rule, we have one type selector (div), one id selector (#materials) and finally one class selector (.book). The specificity
-                of the first rule is <b>1,1,1</b>. <br>
-                The second rule has one id selector (#materials) and one class selector (.book) so it's specificity becomes <b>1,1,0</b>. <br><br>
-                This means that
-                even though the second rule should be applied because of cascading, since CSS first checks the specificity of the rules,
-                the first one will be applied and the element will have a color of orange.
-            </p>
-        </section>
-    </main>
+                    <code>
+                        #heading .examples:first-child {....}
+                    </code>
+                </div>
+                <p>
+                    Here, we have one id selector (#heading), one class selector (.examples) and one pseudo-class (:first-child). That means the specificity of this
+                    CSS rule is <b>1,2,0</b>. Now, for the final digit, we count the number of type selectors and pseudo-elements. Now let's see an example
+                    to understand how to determine which rule will be applied when two rules target the same element.
+                </p>
+                <p>
+                    Let's take an element with the class of <i>book</i>. Two CSS rules will try to apply color to it. The rule with the higher specificity will be used.
+                </p>
+                <div class="code-examples">
+                    <code>
+                        div#materials > .book { <br>
+                            &nbsp;&nbsp;color: orange; <br>
+                        }
+                        <br>
+                        #materials > .book { <br>
+                            &nbsp;&nbsp;color: blue; <br>
+                        }
+                    </code>
+                </div>
+                <p>
+                    In the first rule, we have one type selector (div), one id selector (#materials) and finally one class selector (.book). The specificity
+                    of the first rule is <b>1,1,1</b>. <br>
+                    The second rule has one id selector (#materials) and one class selector (.book) so it's specificity becomes <b>1,1,0</b>. <br><br>
+                    This means that
+                    even though the second rule should be applied because of cascading, since CSS first checks the specificity of the rules,
+                    the first one will be applied and the element will have a color of orange.
+                </p>
+            </section>
+        </main>
+    </div>
 </body>
 </html>
